@@ -12,3 +12,117 @@
         transform: translate(-50%,-50%) scale(1);
     }
 }
+
+//  banner動畫
+@keyframes bannerWordJump_1 {
+    0% {
+        opacity: 0;
+        transform: rotate(480deg) scale(2);
+    }
+
+    7% {
+        opacity: 0;
+        transform: rotate(480deg) scale(2);
+    }
+
+    15% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg) scale(1);
+    }
+}
+@keyframes bannerWordJump_1-2 {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        transform: scale(2);
+    }
+}
+
+@keyframes bannerWordJump_2 {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    20% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    25% {
+        transform: translateX(-10%);
+    }
+
+    33% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
+
+@keyframes people_1 {
+    0% {
+        opacity: 0;
+        transform: translate(-20%,100%);
+    }
+
+    33% {
+        opacity: 0;
+        transform: translate(-20%,100%);
+    }
+
+    40% {
+        opacity: 1;
+        transform: translate(0%,10%) rotate(15deg);
+    }
+
+    48% {
+        transform: translate(-5%,10%) rotate(-5deg);
+    }
+
+    58% {
+        transform: translate(0%,0%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0%,0%) rotate(0deg);
+    }
+}
+
+@keyframes people_2 {
+    0% {
+        opacity: 0;
+        transform: translate(20%,100%);
+    }
+
+    36% {
+        opacity: 0;
+        transform: translate(20%,100%);
+    }
+
+    47% {
+        opacity: 1;
+        transform: translate(0%,10%) rotate(-15deg);
+    }
+
+    55% {
+        transform: translate(0%,0%) rotate(0deg);
+    }
+
+    100% {
+        transform: translate(0%,0%) rotate(0deg);
+    }
+}

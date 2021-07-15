@@ -314,6 +314,114 @@ html body header .logo {
   float: right;
   cursor: pointer;
 }
+html body main {
+  width: 100%;
+  height: auto;
+  padding-top: 120px;
+}
+html body main .single-item {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0px !important;
+}
+html body main .single-item a {
+  outline: none;
+}
+html body main .single-item a:hover .img div.mainWord_1, html body main .single-item a:hover .img div.mainWord_2, html body main .single-item a:active .img div.mainWord_1, html body main .single-item a:active .img div.mainWord_2, html body main .single-item a.active .img div.mainWord_1, html body main .single-item a.active .img div.mainWord_2 {
+  opacity: 1;
+}
+html body main .single-item a.slick-active .img div.mainWord_1 {
+  opacity: 1;
+  animation: bannerWordJump_1 5s linear 0.2s;
+}
+html body main .single-item a.slick-active .img div.mainWord_1::before {
+  animation: bannerWordJump_1-2 0.5s ease-out 0.8s;
+}
+html body main .single-item a.slick-active .img div.mainWord_2 {
+  opacity: 1;
+  animation: bannerWordJump_2 5s ease-out 0s;
+}
+html body main .single-item a.slick-active .img div.people_1 {
+  opacity: 1;
+  animation: people_1 5s linear 0s;
+}
+html body main .single-item a.slick-active .img div.people_2 {
+  opacity: 1;
+  animation: people_2 5s linear 0s;
+}
+html body main .single-item a .img {
+  width: 100%;
+  height: auto;
+  padding-bottom: 25.521%;
+  background: url("../imgaes/banner/bannerBase.png") no-repeat;
+  background-size: 100%;
+  position: relative;
+  overflow: hidden;
+}
+html body main .single-item a .img div {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: auto;
+  padding-bottom: 25.521%;
+}
+html body main .single-item a .img div.mainWord_1 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerMainWord_1.png") no-repeat;
+  background-size: 100%;
+  z-index: 10;
+}
+html body main .single-item a .img div.mainWord_1::before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../imgaes/banner/bannerMainWord_1.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.mainWord_2 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerMainWord_2.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.mainWord_3 {
+  background: url("../imgaes/banner/bannerMainWord_3.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.people_1 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerPeople_1.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.people_2 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerPeople_2.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item .slick-dots {
+  bottom: 20px;
+}
+html body main .single-item .slick-dots li {
+  margin: 0px 10px;
+}
+html body main .single-item .slick-dots li button:before {
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: #ffffff;
+  opacity: 1;
+  transform: rotate(45deg);
+}
+html body main .single-item .slick-dots li.slick-active button:before {
+  width: 17px;
+  height: 17px;
+  opacity: 1;
+  background-color: #45fffd;
+}
 
 @media only screen and (max-width: 1540px) {
   html body header article .bottom ul li {
@@ -333,5 +441,97 @@ html body header .logo {
   }
   100% {
     transform: translate(-50%, -50%) scale(1);
+  }
+}
+@keyframes bannerWordJump_1 {
+  0% {
+    opacity: 0;
+    transform: rotate(480deg) scale(2);
+  }
+  7% {
+    opacity: 0;
+    transform: rotate(480deg) scale(2);
+  }
+  15% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+  }
+}
+@keyframes bannerWordJump_1-2 {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(2);
+  }
+}
+@keyframes bannerWordJump_2 {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  20% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  25% {
+    transform: translateX(-10%);
+  }
+  33% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes people_1 {
+  0% {
+    opacity: 0;
+    transform: translate(-20%, 100%);
+  }
+  33% {
+    opacity: 0;
+    transform: translate(-20%, 100%);
+  }
+  40% {
+    opacity: 1;
+    transform: translate(0%, 10%) rotate(15deg);
+  }
+  48% {
+    transform: translate(-5%, 10%) rotate(-5deg);
+  }
+  58% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+@keyframes people_2 {
+  0% {
+    opacity: 0;
+    transform: translate(20%, 100%);
+  }
+  36% {
+    opacity: 0;
+    transform: translate(20%, 100%);
+  }
+  47% {
+    opacity: 1;
+    transform: translate(0%, 10%) rotate(-15deg);
+  }
+  55% {
+    transform: translate(0%, 0%) rotate(0deg);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg);
   }
 }

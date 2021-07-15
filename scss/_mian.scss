@@ -5,6 +5,7 @@ html {
 
     body {
         width: 100%;
+        min-width: 1280px;
         height: 100%;
         position: relative;
 
@@ -13,7 +14,7 @@ html {
             width: 100%;
             height: 120px;
             background: #ffa200;
-            box-shadow: 0px -2px 5px #00000085 inset;
+            box-shadow: 0px -1px 5px #00000085 inset;
             position: absolute;
             top: 0px;
             left: 0px;
@@ -33,7 +34,7 @@ html {
                     .dicoration {
                         float: right;
     
-                        &:nth-child(1) {
+                        &.d1 {
                             width: 267px;
                             height: 50px;
                             top: 0px;
@@ -41,11 +42,31 @@ html {
                             background: url('../imgaes/headerDec_1.png') no-repeat;
                         }
     
-                        &:nth-child(3) {
-                            width: 449px;
+                        &.d2 {
+                            width: auto;
                             height: 50px;
-                            top: 0px;
-                            background: url('../imgaes/headerDec_2.png') no-repeat;
+                            
+                            div {
+                                float: left;
+
+                                &:nth-of-type(1) {
+                                    width: 59px;
+                                    height: 100%;
+                                    background: url('../imgaes/headerDec_2-1.png') no-repeat;
+                                }
+
+                                &:nth-of-type(2) {
+                                    width: 351px;
+                                    height: 100%;
+                                    background: url('../imgaes/headerDec_2-2.png');
+                                }
+
+                                &:nth-of-type(3) {
+                                    width: 39px;
+                                    height: 100%;
+                                    background: url('../imgaes/headerDec_2-3.png') no-repeat;
+                                }
+                            }
                         }
                     }
     
@@ -211,6 +232,7 @@ html {
                         width: auto;
                         height: 100%;
                         padding-right: 110px;
+                        margin-right: 20px;
 
                         li {
                             display: inline-block;
@@ -224,6 +246,8 @@ html {
                                     span {
                                         animation: wordBox 0.3s ease-out 0s;
                                         background: url('../imgaes/wordBox.png') no-repeat;
+                                        background-size: 100%;
+                                        color: #000000;
                                     }
                                 }
                             }
@@ -236,13 +260,16 @@ html {
                                 position: relative;
 
                                 span {
-                                    display: inline-block;
+                                    position: absolute;
                                     width: 100%;
                                     height: 64px;
                                     line-height: 64px;
                                     font-size: 18px;
                                     font-weight: bold;
                                     color: #5a0211;
+                                    top: 50%;
+                                    left: 50%;
+                                    transform: translate(-50%,-50%);
                                 }
                             }
                         }
@@ -257,6 +284,37 @@ html {
                 background: url('../imgaes/logo.png') no-repeat;
                 float: right;
                 cursor: pointer;
+            }
+        }
+    }
+}
+@media only screen and(max-width: 1540px) {
+    html {
+
+        body {
+
+            header {
+
+                article {
+
+                    .bottom {
+
+                        ul {
+    
+                            li {
+                                width: 100px;
+    
+                                a {
+    
+                                    span {
+                                        height: 52px;
+                                        line-height: 52px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
     }

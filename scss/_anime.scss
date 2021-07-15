@@ -1,0 +1,14 @@
+// header wordBox
+@keyframes wordBox {
+    0% {
+        transform: translate(-50%,-50%) scale(0);
+    }
+
+    80% {
+        transform: translate(0%,0%) scale(1.2);
+    }
+
+    100% {
+        transform: translate(0%,0%) scale(1);
+    }
+}

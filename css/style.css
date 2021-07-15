@@ -1,0 +1,305 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+  font-family: "微軟正黑體";
+}
+
+ol, ul {
+  list-style: none;
+  box-sizing: border-box;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  padding: 0px;
+  font-family: "微軟正黑體";
+}
+
+select, input {
+  outline: none;
+  box-sizing: border-box;
+  font-family: "微軟正黑體";
+}
+
+main {
+  display: block;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background: #ffdd00;
+}
+html body {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+html body header {
+  width: 100%;
+  height: 120px;
+  background: #ffa200;
+  box-shadow: 0px -2px 5px #00000085 inset;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+html body header article {
+  width: 1460px;
+  height: 100%;
+  float: right;
+}
+html body header article .top {
+  width: auto;
+  height: 50px;
+  float: right;
+}
+html body header article .top .dicoration {
+  float: right;
+}
+html body header article .top .dicoration:nth-child(1) {
+  width: 267px;
+  height: 50px;
+  top: 0px;
+  right: 0px;
+  background: url("../imgaes/headerDec_1.png") no-repeat;
+}
+html body header article .top .dicoration:nth-child(3) {
+  width: 449px;
+  height: 50px;
+  top: 0px;
+  background: url("../imgaes/headerDec_2.png") no-repeat;
+}
+html body header article .top .accountSpace {
+  width: auto;
+  height: 100%;
+  float: right;
+}
+html body header article .top .accountSpace .inputBox {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  line-height: 50px;
+}
+html body header article .top .accountSpace .inputBox:nth-child(2) {
+  margin-left: 10px;
+}
+html body header article .top .accountSpace .inputBox span {
+  color: #5c0210;
+  font-size: 15px;
+  font-weight: bold;
+  padding-right: 5px;
+}
+html body header article .top .accountSpace .inputBox input {
+  width: 160px;
+  height: 24px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 2px 3px 5px 0px #00000085 inset;
+  padding-left: 10px;
+  font-size: 14px;
+  color: #5c0210;
+}
+html body header article .top .accountSpace button {
+  width: auto;
+  height: auto;
+  background: #fad900;
+  border-radius: 10px;
+  border-style: solid;
+  border-width: 1px 0px 0px 1px;
+  border-color: #ffffff;
+  box-shadow: 1px 2px 1px 0px #db9500;
+}
+html body header article .top .accountSpace button:nth-of-type(1) {
+  color: #000000;
+  padding: 1px 13px 2px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-left: 5px;
+}
+html body header article .top .accountSpace button:nth-of-type(2) {
+  color: #4d2d11;
+  padding: 1px 8px 2px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+html body header article .top .accountSpace button:hover, html body header article .top .accountSpace button:active, html body header article .top .accountSpace button.active {
+  border-color: #af9700 transparent transparent #af9700;
+  box-shadow: 1px 2px 3px #00000030 inset;
+  color: #5b0210;
+}
+html body header article .top .accountSpace a {
+  position: relative;
+  margin: 0px 10px 0px 27px;
+}
+html body header article .top .accountSpace a:hover::before, html body header article .top .accountSpace a:active::before, html body header article .top .accountSpace a.active::before {
+  background-position-y: 100%;
+}
+html body header article .top .accountSpace a:hover span, html body header article .top .accountSpace a:active span, html body header article .top .accountSpace a.active span {
+  color: #ff0000;
+}
+html body header article .top .accountSpace a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: -23px;
+  width: 19px;
+  height: 19px;
+  background: url("../imgaes/question.png") no-repeat;
+}
+html body header article .top .accountSpace a span {
+  text-decoration: underline;
+  color: #ffffff;
+  font-size: 14px;
+}
+html body header article .top .accountSpace label {
+  display: inline-block;
+  width: auto;
+  height: 23px;
+  background: #fad900;
+  border-radius: 20px;
+  border-style: solid;
+  border-width: 1px 0px 0px 1px;
+  border-color: #ffffff;
+  box-shadow: 1px 2px 1px 0px #db9500;
+  position: relative;
+}
+html body header article .top .accountSpace label::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 12px;
+  width: 12px;
+  height: 7px;
+  background: url("../imgaes/arrow_d_brown.png") no-repeat;
+  pointer-events: none;
+}
+html body header article .top .accountSpace label:hover, html body header article .top .accountSpace label:active, html body header article .top .accountSpace label.active {
+  border-color: #af9700 transparent transparent #af9700;
+  box-shadow: 1px 2px 3px #00000030 inset;
+}
+html body header article .top .accountSpace label select {
+  width: 100%;
+  height: 100%;
+  background: none;
+  border: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  padding: 0px 25px 0px 10px;
+  color: #5b0210;
+  font-size: 16px;
+  cursor: pointer;
+}
+html body header article .top .accountSpace label select option {
+  background: #fad900;
+}
+html body header article .bottom {
+  width: auto;
+  height: 70px;
+  float: right;
+}
+html body header article .bottom ul {
+  width: auto;
+  height: 100%;
+  padding-right: 110px;
+}
+html body header article .bottom ul li {
+  display: inline-block;
+  width: 126px;
+  height: 100%;
+}
+html body header article .bottom ul li:hover a span, html body header article .bottom ul li:active a span, html body header article .bottom ul li.active a span {
+  animation: wordBox 0.3s ease-out 0s;
+  background: url("../imgaes/wordBox.png") no-repeat;
+}
+html body header article .bottom ul li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+html body header article .bottom ul li a span {
+  display: inline-block;
+  width: 100%;
+  height: 64px;
+  line-height: 64px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #5a0211;
+}
+html body header .logo {
+  width: 247px;
+  height: 117px;
+  background: url("../imgaes/logo.png") no-repeat;
+  float: right;
+  cursor: pointer;
+}
+
+@keyframes wordBox {
+  0% {
+    transform: translate(-50%, -50%) scale(0);
+  }
+  80% {
+    transform: translate(0%, 0%) scale(1.2);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}

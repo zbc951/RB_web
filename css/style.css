@@ -86,8 +86,18 @@ html {
 html body {
   width: 100%;
   min-width: 1280px;
-  height: 100%;
+  height: auto;
   position: relative;
+}
+html body::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+html body::-webkit-scrollbar-thumb {
+  background: #383838;
+}
+html body::-webkit-scrollbar-track {
+  background: #888888;
 }
 html body header {
   width: 100%;
@@ -349,6 +359,24 @@ html body main .single-item a.slick-active .img div.people_2 {
   opacity: 1;
   animation: people_2 5s linear 0s;
 }
+html body main .single-item a.slick-active .img div.word_1 {
+  animation: word_1 2.5s ease-out 3s infinite;
+}
+html body main .single-item a.slick-active .img div.word_2 {
+  opacity: 1;
+  animation: word_2 5s linear 0s;
+}
+html body main .single-item a.slick-active .img div.word_3 {
+  animation: word_3 2.5s ease-out 3s infinite;
+}
+html body main .single-item a.slick-active .img div.word_4 {
+  opacity: 1;
+  animation: word_4 5s linear 0s;
+}
+html body main .single-item a.slick-active .img div.word_5 {
+  opacity: 1;
+  animation: word_4 5s linear 0s;
+}
 html body main .single-item a .img {
   width: 100%;
   height: auto;
@@ -396,10 +424,37 @@ html body main .single-item a .img div.people_1 {
   opacity: 0;
   background: url("../imgaes/banner/bannerPeople_1.png") no-repeat;
   background-size: 100%;
+  z-index: 9;
 }
 html body main .single-item a .img div.people_2 {
   opacity: 0;
   background: url("../imgaes/banner/bannerPeople_2.png") no-repeat;
+  background-size: 100%;
+  z-index: 9;
+}
+html body main .single-item a .img div.word_1 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerRightWord_1.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.word_2 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerRightWord_2.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.word_3 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerleftWord_1.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.word_4 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerleftWord_2.png") no-repeat;
+  background-size: 100%;
+}
+html body main .single-item a .img div.word_5 {
+  opacity: 0;
+  background: url("../imgaes/banner/bannerleftWord_3.png") no-repeat;
   background-size: 100%;
 }
 html body main .single-item .slick-dots {
@@ -421,6 +476,306 @@ html body main .single-item .slick-dots li.slick-active button:before {
   height: 17px;
   opacity: 1;
   background-color: #45fffd;
+}
+html body main .rightIcon {
+  width: auto;
+  height: auto;
+  position: fixed;
+  right: 0px;
+  top: 200px;
+  z-index: 20;
+}
+html body main .rightIcon a {
+  display: block;
+  position: absolute;
+  width: 92px;
+  height: 131px;
+  right: 0px;
+}
+html body main .rightIcon a:hover::before, html body main .rightIcon a:active::before, html body main .rightIcon a.active::before {
+  animation: rightHover_2 0.3s linear 0s;
+}
+html body main .rightIcon a:hover::after, html body main .rightIcon a:active::after, html body main .rightIcon a.active::after {
+  background-position-y: 100%;
+  animation: rightHover_1 0.3s linear 0s;
+}
+html body main .rightIcon a::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 34px;
+  width: 39px;
+  height: 34px;
+  background: url("../imgaes/rightIconImg.png") no-repeat;
+  background-size: 300%;
+  z-index: 2;
+}
+html body main .rightIcon a::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../imgaes/rightIconBox.png") no-repeat;
+  background-size: 100%;
+}
+html body main .rightIcon a:nth-of-type(1) {
+  top: 0px;
+}
+html body main .rightIcon a:nth-of-type(2) {
+  top: 105px;
+}
+html body main .rightIcon a:nth-of-type(2)::before {
+  background-position-x: 50%;
+}
+html body main .rightIcon a:nth-of-type(3) {
+  top: 210px;
+}
+html body main .rightIcon a:nth-of-type(3)::before {
+  background-position-x: 100%;
+}
+html body main .download {
+  position: fixed;
+  display: block;
+  width: 76px;
+  height: 230px;
+  left: 0px;
+  top: 260px;
+  background: url("../imgaes/downloadBox.png") no-repeat;
+  background-size: 100%;
+  z-index: 20;
+}
+html body main .download:hover, html body main .download:active, html body main .download.active {
+  background-position-y: 100%;
+  animation: rightHover_1 0.3s linear 0s;
+}
+html body main .download span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  background: url("../imgaes/downloadIcon.png") no-repeat;
+  margin: 50px auto 10px;
+}
+html body main .download p {
+  writing-mode: vertical-lr;
+  font-weight: bold;
+  color: #000000;
+  font-size: 20px;
+  letter-spacing: 3px;
+  margin: 0px auto;
+}
+html body main .mainBox {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-top: 30px;
+}
+html body main .mainBox article {
+  width: 1480px;
+  height: auto;
+  margin: 0px auto;
+}
+html body main .mainBox article .marqueeBox {
+  width: 1400px;
+  height: auto;
+  margin: 0px auto;
+}
+html body main .mainBox article .marqueeBox span {
+  display: inline-block;
+  width: 35px;
+  height: 30px;
+  background: url("../imgaes/marqueeIcon.png") no-repeat;
+  animation: marqueeJump 5s linear 0s;
+}
+html body main .mainBox article .marqueeBox .marqueeBg {
+  display: inline-block;
+  position: relative;
+  width: 96%;
+  height: 33px;
+  box-sizing: border-box;
+  padding: 0px 17px 0px 37px;
+  animation: marqueeSlide_1 5s linear 0s;
+}
+html body main .mainBox article .marqueeBox .marqueeBg::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 37px;
+  height: 100%;
+  background: url("../imgaes/marqueeBody_1.png") no-repeat;
+}
+html body main .mainBox article .marqueeBox .marqueeBg::after {
+  content: "";
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 17px;
+  height: 100%;
+  background: url("../imgaes/marqueeBody_3.png") no-repeat;
+}
+html body main .mainBox article .marqueeBox .marqueeBg marquee {
+  width: 100%;
+  height: auto;
+  color: #f9f9f9;
+  line-height: 33px;
+  background: url("../imgaes/marqueeBody_2.png");
+  font-size: 16px;
+}
+html body main .mainBox article .mainPage {
+  width: 100%;
+  height: auto;
+  margin-top: 50px;
+  position: relative;
+}
+html body main .mainBox article .mainPage .openBtn {
+  display: none;
+  width: 277px;
+  height: 241px;
+  background: url("../imgaes/openBtn.png") no-repeat;
+  background-size: 100%;
+  position: absolute;
+  top: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: openBtn_1 1s ease-in-out 0s infinite alternate;
+}
+html body main .mainBox article .mainPage .openBtn:hover p:nth-of-type(1), html body main .mainBox article .mainPage .openBtn:active p:nth-of-type(1), html body main .mainBox article .mainPage .openBtn.active p:nth-of-type(1) {
+  opacity: 0;
+}
+html body main .mainBox article .mainPage .openBtn:hover p:nth-of-type(2), html body main .mainBox article .mainPage .openBtn:active p:nth-of-type(2), html body main .mainBox article .mainPage .openBtn.active p:nth-of-type(2) {
+  opacity: 1;
+}
+html body main .mainBox article .mainPage .openBtn p {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 45px;
+  font-size: 36px;
+  color: #ffffff;
+  transition: 0.3s all;
+  white-space: nowrap;
+}
+html body main .mainBox article .mainPage .openBtn p:nth-of-type(2) {
+  opacity: 0;
+}
+html body main .mainBox article .mainPage .openBtn::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 80px;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  background: url("../imgaes/arrow_d_dot.png") no-repeat;
+  background-size: 100%;
+  animation: openBtn_2 1s ease-in-out 0.5s infinite alternate;
+}
+html body main .mainBox article .mainPage .imgBox {
+  width: 100%;
+  height: auto;
+  display: flex;
+}
+html body main .mainBox article .mainPage .imgBox li {
+  width: 100%;
+  height: auto;
+  padding-bottom: 45%;
+  position: relative;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) a {
+  -webkit-clip-path: polygon(29% 0%, 72% 1%, 92% 20%, 95% 58%, 61% 91%, 45% 91%, 42% 100%, 28% 90%, 6% 89%, 8% 17%);
+          clip-path: polygon(29% 0%, 72% 1%, 92% 20%, 95% 58%, 61% 91%, 45% 91%, 42% 100%, 28% 90%, 6% 89%, 8% 17%);
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .img {
+  background-position-x: 12.5%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) a {
+  -webkit-clip-path: polygon(31% 1.5%, 53% 1.5%, 87% 9%, 87% 69%, 81% 72%, 85% 93%, 67% 92%, 64% 100%, 53% 92%, 20% 90%, 23% 61%, 15% 57%, 15% 4%);
+          clip-path: polygon(31% 1.5%, 53% 1.5%, 87% 9%, 87% 69%, 81% 72%, 85% 93%, 67% 92%, 64% 100%, 53% 92%, 20% 90%, 23% 61%, 15% 57%, 15% 4%);
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .img {
+  background-position-x: 25%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .img {
+  background-position-x: 37.5%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .img {
+  background-position-x: 50%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .img {
+  background-position-x: 62.5%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .img {
+  background-position-x: 75%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .img {
+  background-position-x: 87.5%;
+}
+html body main .mainBox article .mainPage .imgBox li .img {
+  width: 100%;
+  height: 100%;
+  background: url("../imgaes/mainImgBox.png") no-repeat;
+  background-size: 900%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+html body main .mainBox article .mainPage .imgBox li a {
+  display: block;
+  width: 100%;
+  height: 90%;
+  background: #000;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+html body main .mainBox .mainBg {
+  display: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  z-index: -1;
+  animation: mainBgSlide 0.6s linear 0s;
+  overflow: hidden;
+}
+html body main .mainBox .mainBg.display {
+  display: block;
+}
+html body main .mainBox .mainBg .img {
+  width: 1920px;
+  height: 100%;
+  -webkit-clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
+          clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
+  background: #ffa200;
+  overflow: hidden;
+  animation: mainBgClip 1.2s ease-out 0s;
+}
+html body main .mainBox .mainBg .img div {
+  width: 100%;
+  height: 100%;
+  background: url("../imgaes/mainBG.png") no-repeat;
+  background-size: cover;
+  margin: 3% 0% 0% 1%;
+}
+html body footer {
+  width: 100%;
+  height: 50px;
+  background: #000;
+}
+html body .bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  left: 0px;
+  background: url("../imgaes/background.jpg") no-repeat;
+  background-size: cover;
+  z-index: -999;
 }
 
 @media only screen and (max-width: 1540px) {
@@ -499,20 +854,31 @@ html body main .single-item .slick-dots li.slick-active button:before {
   }
   33% {
     opacity: 0;
-    transform: translate(-20%, 100%);
+    transform: translate(-20%, 100%) rotate(45deg);
   }
-  40% {
+  44% {
     opacity: 1;
-    transform: translate(0%, 10%) rotate(15deg);
-  }
-  48% {
-    transform: translate(-5%, 10%) rotate(-5deg);
-  }
-  58% {
     transform: translate(0%, 0%) rotate(0deg);
   }
   100% {
     transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+@keyframes people_1-2 {
+  0% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  15% {
+    transform: translate(0%, 10%) rotate(-5deg) scale(1.1);
+  }
+  30% {
+    transform: translate(0%, 10%) rotate(5deg) scale(1.1);
+  }
+  45% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  100% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
   }
 }
 @keyframes people_2 {
@@ -520,18 +886,225 @@ html body main .single-item .slick-dots li.slick-active button:before {
     opacity: 0;
     transform: translate(20%, 100%);
   }
-  36% {
+  33% {
     opacity: 0;
-    transform: translate(20%, 100%);
+    transform: translate(20%, 100%) rotate(-45deg);
   }
-  47% {
+  44% {
     opacity: 1;
-    transform: translate(0%, 10%) rotate(-15deg);
-  }
-  55% {
     transform: translate(0%, 0%) rotate(0deg);
   }
   100% {
     transform: translate(0%, 0%) rotate(0deg);
+  }
+}
+@keyframes people_2-2 {
+  0% {
+    transform: scale(1);
+  }
+  15% {
+    transform: scale(1);
+  }
+  20% {
+    transform: translateY(10%) scaleX(1.05) scaleY(0.95);
+  }
+  25% {
+    transform: translateY(10%) scaleX(0.95) scaleY(1.05);
+  }
+  30% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes word_1 {
+  0% {
+    opacity: 0;
+    transform: translate(5%, 5%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes word_2 {
+  0% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  30% {
+    opacity: 0;
+    transform: rotate(90deg);
+  }
+  44% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes word_3 {
+  0% {
+    opacity: 0;
+    transform: translate(-5%, 5%);
+  }
+  50% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+  80% {
+    opacity: 0;
+    transform: translate(0%, 0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes word_4 {
+  0% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  30% {
+    opacity: 0;
+    transform: rotate(-90deg);
+  }
+  44% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+}
+@keyframes rightHover_1 {
+  0% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+}
+@keyframes rightHover_2 {
+  0% {
+    transform: translateY(-50%) scale(0.9);
+  }
+  30% {
+    transform: translateY(-50%) scale(1.1);
+  }
+  40% {
+    transform: translateY(-50%) scale(1);
+  }
+}
+@keyframes marqueeJump {
+  0% {
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+  60% {
+    opacity: 0;
+    transform: rotate(-30deg);
+  }
+  63% {
+    opacity: 1;
+    transform: rotate(-30deg) scale(1.2);
+  }
+  65% {
+    transform: rotate(-30deg) scale(1);
+  }
+  70% {
+    transform: rotate(0deg);
+  }
+  80% {
+    transform: scale(1);
+  }
+  83% {
+    transform: scale(1.1);
+  }
+  85% {
+    transform: scale(1);
+  }
+  88% {
+    transform: scale(1.1);
+  }
+  90% {
+    transform: scale(1);
+  }
+  93% {
+    transform: scale(1.1);
+  }
+  95% {
+    transform: scale(1);
+  }
+  98% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes marqueeSlide_1 {
+  0% {
+    opacity: 0;
+    width: 0%;
+  }
+  70% {
+    opacity: 0;
+    width: 0%;
+  }
+  75% {
+    opacity: 1;
+    width: 0%;
+  }
+  80% {
+    width: 0%;
+  }
+  100% {
+    width: 96%;
+  }
+}
+@keyframes mainBgSlide {
+  0% {
+    width: 0%;
+  }
+  50% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes mainBgClip {
+  0% {
+    -webkit-clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);
+            clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);
+  }
+  50% {
+    -webkit-clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);
+            clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);
+  }
+  100% {
+    -webkit-clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
+            clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
+  }
+}
+@keyframes openBtn_1 {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    transform: translate(-50%, -10%);
+  }
+}
+@keyframes openBtn_2 {
+  0% {
+    transform: translate(-50%, 0%);
+  }
+  100% {
+    transform: translate(-50%, -50%);
   }
 }

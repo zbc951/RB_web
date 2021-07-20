@@ -14,11 +14,16 @@ $(function(){
         $(size1).css('width', (String(wWD - 1443) + "px"));
         $(size2).css('padding-right', (String(wWD - 1600) + "px"));
         $(size3).css('width', (String(wWD - 250) + "px"));
-    }else if(wWD <= 1510) {
+    }else if(wWD <= 1510 && wWD > 1280) {
         $(size1).css('width', (String(68) + "px"));
         $(size2).css('padding-right', (String(0) + "px"));
         $(size3).css('width', (String(wWD - 250) + "px"));
         $(size4).css('width', (String(wWD - 1170) + "px"));
+    }else {
+        $(size1).css('width', (String(68) + "px"));
+        $(size2).css('padding-right', (String(0) + "px"));
+        $(size3).css('width', (String(1030) + "px"));
+        $(size4).css('width', (String(100) + "px"));
     }
 
     $(window).resize(function(){
@@ -57,7 +62,85 @@ $(document).on('ready', function () {
 		slidesToShow: 1,
 		slidesToScroll: 1,
 		autoplay: true,
-		autoplaySpeed: 3500,
+		autoplaySpeed: 4500,
 		arrows: false,
 	})
+})
+
+//跑馬燈伸縮
+$(function(){
+    var wWD = window.innerWidth;
+    var size1 = $('.marqueeBox');
+    if(wWD > 1500) {
+        $(size1).css('width', (String(1400) + "px"));
+    }else if(wWD <= 1500 && wWD > 1280) {
+        $(size1).css('width', (String(wWD - 100) + "px"));
+    }else {
+        $(size1).css('width', (String(1180) + "px"));
+    }
+
+    $(window).resize(function(){
+        var wWD = window.innerWidth;
+        var size1 = $('.marqueeBox');
+        if(wWD > 1500) {
+            $(size1).css('width', (String(1400) + "px"));
+        }else if(wWD <= 1500 && wWD > 1280) {
+            $(size1).css('width', (String(wWD - 100) + "px"));
+        }else {
+            $(size1).css('width', (String(1180) + "px"));
+        }
+    })
+})
+
+//mainPage
+$(function(){
+    var wWD = window.innerWidth;
+    var size1 = $('.mainBox article');
+    if(wWD > 1560) {
+        $(size1).css('width', (String(1480) + "px"));
+    }else if(wWD <= 1560 && wWD > 1280) {
+        $(size1).css('width', (String(wWD - 80) + "px"));
+    }else {
+        $(size1).css('width', (String(1200) + "px"));
+    }
+
+    $(window).resize(function(){
+        var wWD = window.innerWidth;
+        var size1 = $('.mainBox article');
+        if(wWD > 1560) {
+            $(size1).css('width', (String(1480) + "px"));
+        }else if(wWD <= 1560 && wWD > 1280) {
+            $(size1).css('width', (String(wWD - 80) + "px"));
+        }else {
+            $(size1).css('width', (String(1200) + "px"));
+        }
+    })
+})
+
+// mainBg
+$(function(){
+    var wWD = window.innerWidth;
+    var size1 = $('.mainBg .img');
+    $(size1).css('width', (String(wWD) + "px"));
+
+    $(window).resize(function(){
+        var wWD = window.innerWidth;
+        var size1 = $('.mainBg .img');
+        $(size1).css('width', (String(wWD) + "px"));
+    })
+})
+$(function(){
+    setTimeout(function(){
+        $('.openBtn').delay('5000').fadeIn('300');
+    })
+
+    $('.openBtn').click(function(){
+        $(this).fadeOut('300');
+        $('.mainBg').addClass('display');
+
+        var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'); //各瀏覽器相容性
+        $body.animate({
+                scrollTop:500
+        },300)
+    })
 })

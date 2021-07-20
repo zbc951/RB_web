@@ -6,8 +6,23 @@ html {
     body {
         width: 100%;
         min-width: 1280px;
-        height: 100%;
+        height: auto;
         position: relative;
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            height: 5px;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background: #383838;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: #888888;
+        }
+
+
 
         //header
         header {
@@ -337,12 +352,35 @@ html {
 
                                 &.people_1 {
                                     opacity: 1;
-                                    animation: people_1 5s linear 0s;
+                                    animation: people_1 5s linear 0s
                                 }
 
                                 &.people_2 {
                                     opacity: 1;
-                                    animation: people_2 5s linear 0s;
+                                    animation: people_2 5s linear 0s
+                                }
+
+                                &.word_1 {
+                                    animation: word_1 2.5s ease-out 3s infinite;
+                                }
+
+                                &.word_2 {
+                                    opacity: 1;
+                                    animation: word_2 5s linear 0s;
+                                }
+
+                                &.word_3 {
+                                    animation: word_3 2.5s ease-out 3s infinite;
+                                }
+
+                                &.word_4 {
+                                    opacity: 1;
+                                    animation: word_4 5s linear 0s;
+                                }
+
+                                &.word_5 {
+                                    opacity: 1;
+                                    animation: word_4 5s linear 0s;
                                 }
                             }
                         }
@@ -399,11 +437,43 @@ html {
                                 opacity: 0;
                                 background: url('../imgaes/banner/bannerPeople_1.png') no-repeat;
                                 background-size: 100%;
+                                z-index: 9;
                             }
 
                             &.people_2 {
                                 opacity: 0;
                                 background: url('../imgaes/banner/bannerPeople_2.png') no-repeat;
+                                background-size: 100%;
+                                z-index: 9;
+                            }
+
+                            &.word_1 {
+                                opacity: 0;
+                                background: url('../imgaes/banner/bannerRightWord_1.png') no-repeat;
+                                background-size: 100%;
+                            }
+
+                            &.word_2 {
+                                opacity: 0;
+                                background: url('../imgaes/banner/bannerRightWord_2.png') no-repeat;
+                                background-size: 100%;
+                            }
+
+                            &.word_3 {
+                                opacity: 0;
+                                background: url('../imgaes/banner/bannerleftWord_1.png') no-repeat;
+                                background-size: 100%;
+                            }
+
+                            &.word_4 {
+                                opacity: 0;
+                                background: url('../imgaes/banner/bannerleftWord_2.png') no-repeat;
+                                background-size: 100%;
+                            }
+
+                            &.word_5 {
+                                opacity: 0;
+                                background: url('../imgaes/banner/bannerleftWord_3.png') no-repeat;
                                 background-size: 100%;
                             }
                         }
@@ -438,6 +508,393 @@ html {
                     background-color: #45fffd;
                 }
             }
+
+            //rightIcon
+            .rightIcon {
+                width: auto;
+                height: auto;
+                position: fixed;
+                right: 0px;
+                top: 200px;
+                z-index: 20;
+
+                a {
+                    display: block;
+                    position: absolute;
+                    width: 92px;
+                    height: 131px;
+                    right: 0px;
+
+                    &:hover,&:active,&.active {
+
+                        &::before {
+                            animation: rightHover_2 0.3s linear 0s;
+                        }
+                        
+                        &::after {
+                            background-position-y: 100%;
+                            animation: rightHover_1 0.3s linear 0s;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 34px;
+                        width: 39px;
+                        height: 34px;
+                        background: url('../imgaes/rightIconImg.png') no-repeat;
+                        background-size: 300%;
+                        z-index: 2;
+                    }
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 0px;
+                        left: 0px;
+                        width: 100%;
+                        height: 100%;
+                        background: url('../imgaes/rightIconBox.png') no-repeat;
+                        background-size: 100%;
+                    }
+
+                    &:nth-of-type(1) {
+                        top: 0px;
+                    }
+
+                    &:nth-of-type(2) {
+                        top: 105px;
+
+                        &::before {
+                            background-position-x: 50%;
+                        }
+                    }
+
+                    &:nth-of-type(3) {
+                        top: 210px;
+
+                        &::before {
+                            background-position-x: 100%;
+                        }
+                    }
+                }
+            }
+
+            //手機下載
+            .download {
+                position: fixed;
+                display: block;
+                width: 76px;
+                height: 230px;
+                left: 0px;
+                top: 260px;
+                background: url('../imgaes/downloadBox.png') no-repeat;
+                background-size: 100%;
+                z-index: 20;
+
+                &:hover,&:active,&.active {
+                    background-position-y: 100%;
+                    animation: rightHover_1 0.3s linear 0s;
+                }
+                
+                span {
+                    display: block;
+                    width: 25px;
+                    height: 25px;
+                    background: url('../imgaes/downloadIcon.png') no-repeat;
+                    margin: 50px auto 10px;
+                }
+
+                p {
+                    writing-mode: vertical-lr;
+                    font-weight: bold;
+                    color: #000000;
+                    font-size: 20px;
+                    letter-spacing: 3px;
+                    margin: 0px auto;
+                }
+            }
+            
+            //主區域
+            .mainBox {
+                width: 100%;
+                height: auto;
+                position: relative;
+                padding-top: 30px;
+                
+                article {
+                    width: 1480px;
+                    height: auto;
+                    margin: 0px auto;
+
+                    //跑馬燈
+                    .marqueeBox {
+                        width: 1400px;
+                        height: auto;
+                        margin: 0px auto;
+                         
+                        span {
+                            display: inline-block;
+                            width: 35px;
+                            height: 30px;
+                            background: url('../imgaes/marqueeIcon.png') no-repeat;
+                            animation: marqueeJump 5s linear 0s;
+                        }
+
+                        .marqueeBg {
+                            display: inline-block;
+                            position: relative;
+                            width: 96%;
+                            height: 33px;
+                            box-sizing: border-box;
+                            padding: 0px 17px 0px 37px;
+                            animation: marqueeSlide_1 5s linear 0s;
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                top: 0px;
+                                left: 0px;
+                                width: 37px;
+                                height: 100%;
+                                background: url('../imgaes/marqueeBody_1.png') no-repeat;
+                            }
+
+                            &::after {
+                                content: "";
+                                position: absolute;
+                                top: 0px;
+                                right: 0px;
+                                width: 17px;
+                                height: 100%;
+                                background: url('../imgaes/marqueeBody_3.png') no-repeat;
+                            }
+
+                            marquee {
+                                width: 100%;
+                                height: auto;
+                                color: #f9f9f9;
+                                line-height: 33px;
+                                background: url('../imgaes/marqueeBody_2.png');
+                                font-size: 16px;
+                            }
+                        }
+                    }
+
+                    //主畫面
+                    .mainPage {
+                        width: 100%;
+                        height: auto;
+                        margin-top: 50px;
+                        position: relative;
+
+                        .openBtn {
+                            display: none;
+                            width: 277px;
+                            height: 241px;
+                            background: url('../imgaes/openBtn.png') no-repeat;
+                            background-size: 100%;
+                            position: absolute;
+                            top: 0px;
+                            left: 50%;
+                            transform: translateX(-50%);
+                            cursor: pointer;
+                            animation: openBtn_1 1s ease-in-out 0s infinite alternate;
+
+                            &:hover,&:active,&.active {
+                                
+
+                                p {
+
+                                    &:nth-of-type(1) {
+                                        opacity: 0;
+                                    }
+
+                                    &:nth-of-type(2) {
+                                        opacity: 1;
+                                    }
+                                }
+                            }
+
+                            p {
+                                position: absolute;
+                                left: 50%;
+                                transform: translateX(-50%);
+                                top: 45px;
+                                font-size: 36px;
+                                color: #ffffff;
+                                transition: 0.3s all;
+                                white-space: nowrap;
+
+                                &:nth-of-type(2) {
+                                    opacity: 0;
+                                }
+                            }
+
+                            &::before {
+                                content: "";
+                                position: absolute;
+                                left: 50%;
+                                bottom: 80px;
+                                transform: translateX(-50%);
+                                width: 40px;
+                                height: 40px;
+                                background: url('../imgaes/arrow_d_dot.png') no-repeat;
+                                background-size: 100%;
+                                animation: openBtn_2 1s ease-in-out 0.5s infinite alternate;
+                            }
+                        }
+                        
+                        .imgBox {
+                            width: 100%;
+                            height: auto;
+                            display: flex;
+
+                            li {
+                                width: 100%;
+                                height: auto;
+                                padding-bottom: 45%;
+                                position: relative;
+
+                                &:nth-of-type(1) {
+
+                                    a {
+                                        clip-path: polygon(29% 0%, 72% 1%, 92% 20%, 95% 58%, 61% 91%, 45% 91%, 42% 100%, 28% 90%, 6% 89%, 8% 17%);
+                                    }
+                                }
+
+                                &:nth-of-type(2) {
+
+                                    .img {
+                                        background-position-x: 12.5%;
+                                    }
+
+                                    a {
+                                        clip-path: polygon(31% 1.5%, 53% 1.5%, 87% 9%, 87% 69%, 81% 72%, 85% 93%, 67% 92%, 64% 100%, 53% 92%, 20% 90%, 23% 61%, 15% 57%, 15% 4%);
+                                    }
+                                }
+
+                                &:nth-of-type(3) {
+
+                                    .img {
+                                        background-position-x: 25%;
+                                    }
+                                }
+
+                                &:nth-of-type(4) {
+
+                                    .img {
+                                        background-position-x: 37.5%;
+                                    }
+                                }
+
+                                &:nth-of-type(5) {
+
+                                    .img {
+                                        background-position-x: 50%;
+                                    }
+                                }
+                                
+                                &:nth-of-type(6) {
+
+                                    .img {
+                                        background-position-x: 62.5%;
+                                    }
+                                }
+
+                                &:nth-of-type(7) {
+
+                                    .img {
+                                        background-position-x: 75%;
+                                    }
+                                }
+
+                                &:nth-of-type(8) {
+
+                                    .img {
+                                        background-position-x: 87.5%;
+                                    }
+                                }
+
+                                .img {
+                                    width: 100%;
+                                    height: 100%;
+                                    background: url('../imgaes/mainImgBox.png') no-repeat;
+                                    background-size: 900%;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                }
+
+                                a {
+                                    display: block;
+                                    width: 100%;
+                                    height: 90%;
+                                    background: #000;
+                                    position: absolute;
+                                    top: 0px;
+                                    left: 0px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                //主背景
+                .mainBg {
+                    display: none;
+                    position: absolute;
+                    width: 100%;
+                    height: 100%;
+                    top: 0px;
+                    left: 0px;
+                    z-index: -1;
+                    animation: mainBgSlide 0.6s linear 0s;
+                    overflow: hidden;
+
+                    &.display {
+                        display: block;
+                    }
+
+                    .img {
+                        width: 1920px;
+                        height: 100%;
+                        clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
+                        background: #ffa200;
+                        overflow: hidden;
+                        animation: mainBgClip 1.2s ease-out 0s;
+
+                        div {
+                            width: 100%;
+                            height: 100%;
+                            background: url('../imgaes/mainBG.png') no-repeat;
+                            background-size: cover;
+                            margin: 3% 0% 0% 1%;
+                        }
+                    }
+                }
+            }
+        }
+
+        //footer
+        footer {
+            width: 100%;
+            height: 50px;
+            background: #000;
+        }
+
+        .bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            background: url('../imgaes/background.jpg') no-repeat;
+            background-size: cover;
+            z-index: -999;
         }
     }
 }

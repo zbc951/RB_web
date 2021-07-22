@@ -680,6 +680,7 @@ html body main .mainBox article .mainPage .imgBox {
   height: auto;
   display: flex;
   overflow: hidden;
+  padding-bottom: 50px;
 }
 html body main .mainBox article .mainPage .imgBox.slide li {
   padding-bottom: 45%;
@@ -1048,7 +1049,6 @@ html body main .mainBox .mainBg .img div {
 html body footer {
   width: 100%;
   height: auto;
-  margin-top: 50px;
 }
 html body footer .top {
   width: 100%;
@@ -1056,6 +1056,86 @@ html body footer .top {
   border: solid 1px #000000;
   border-width: 1px 0px;
   background: linear-gradient(to bottom, #f19900 0%, #c37c00 100%);
+}
+html body footer .top article {
+  width: 1480px;
+  height: 100%;
+  margin: 0px auto;
+}
+html body footer .top article ul {
+  width: auto;
+  height: 100%;
+  float: left;
+}
+html body footer .top article ul li {
+  display: inline-block;
+  width: auto;
+  height: 100%;
+  text-align: center;
+  margin: 0px 10px;
+}
+html body footer .top article ul li:hover a span, html body footer .top article ul li:active a span, html body footer .top article ul li.active a span {
+  animation: wordBox 0.3s ease-out 0s;
+  background: url("../imgaes/wordBox_small.png") no-repeat;
+  background-size: 100%;
+  color: #000000;
+}
+html body footer .top article ul li a {
+  display: block;
+  width: 92px;
+  height: 100%;
+  position: relative;
+}
+html body footer .top article ul li a span {
+  display: block;
+  color: #ffffff;
+  position: absolute;
+  width: 100%;
+  height: 47px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  line-height: 47px;
+  font-size: 16px;
+  font-weight: bold;
+}
+html body footer .top article p {
+  float: right;
+  line-height: 55px;
+  color: #ffffff;
+  font-size: 14px;
+}
+html body footer .bottom {
+  width: 100%;
+  height: 160px;
+  position: relative;
+}
+html body footer .bottom div {
+  width: 823px;
+  height: 107px;
+  background: url("../imgaes/footerBg.png") no-repeat;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+html body footer .bottom div p {
+  font-size: 13px;
+  font-weight: bold;
+  color: #4d2d11;
+}
+html body footer .bottom div p:nth-of-type(1) {
+  padding: 23px 0px 39px;
+}
+html body .goTop {
+  display: none;
+  width: 66px;
+  height: 86px;
+  background: url("../imgaes/goTop.png") no-repeat;
+  position: fixed;
+  right: 0px;
+  bottom: 150px;
 }
 html body .bg {
   position: absolute;

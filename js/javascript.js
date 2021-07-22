@@ -152,3 +152,46 @@ $(function(){
         },300)
     })
 })
+
+// footer
+$(function(){
+    var wWD = window.innerWidth;
+    var size1 = $('footer article');
+    if(wWD > 1560) {
+        $(size1).css('width', (String(1480) + "px"));
+    }else if(wWD <= 1560 && wWD > 1280) {
+        $(size1).css('width', (String(wWD - 80) + "px"));
+    }else {
+        $(size1).css('width', (String(1200) + "px"));
+    }
+
+    $(window).resize(function(){
+        var wWD = window.innerWidth;
+        var size1 = $('footer article');
+        if(wWD > 1560) {
+            $(size1).css('width', (String(1480) + "px"));
+        }else if(wWD <= 1560 && wWD > 1280) {
+            $(size1).css('width', (String(wWD - 80) + "px"));
+        }else {
+            $(size1).css('width', (String(1200) + "px"));
+        }
+    })
+})
+
+//goTop
+$(function(){
+	$(window).scroll(function () {
+        var scrollVal = $(this).scrollTop();
+        if(scrollVal > 0){
+                $(".goTop").fadeIn(300);
+        } else{
+                $(".goTop").fadeOut(300);
+        };
+	})
+
+    $('.goTop').click(function(){
+        $('html,body').animate({
+            scrollTop: 0
+        },300)
+    })
+})

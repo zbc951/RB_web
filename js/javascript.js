@@ -116,6 +116,14 @@ $(function(){
         }
     })
 })
+$(function(){
+    $('.openBtn').click(function(){
+        $('.imgBox').addClass('slide');
+        setTimeout(function(){
+            $('.imgBox li').css('opacity','1');
+        },3000)
+    })
+})
 
 // mainBg
 $(function(){

@@ -679,18 +679,54 @@ html body main .mainBox article .mainPage .imgBox {
   width: 100%;
   height: auto;
   display: flex;
+  overflow: hidden;
+}
+html body main .mainBox article .mainPage .imgBox.slide li {
+  padding-bottom: 45%;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(1) {
+  animation: mainImgShow_1 5s ease-out 0s;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(2) {
+  animation: mainImgShow_2 5s ease-out 0s;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(3) {
+  animation: mainImgShow_3 5s ease-out 0s;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(4) {
+  animation: mainImgShow_4 5s ease-out 0s;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(5) {
+  animation: mainImgShow_5 5s ease-out 0s;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(6) {
+  animation: mainImgShow_6 5s ease-out 0s;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(7) {
+  animation: mainImgShow_7 5s ease-out 0s;
+}
+html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(8) {
+  animation: mainImgShow_8 5s ease-out 0s;
 }
 html body main .mainBox article .mainPage .imgBox li {
   width: 100%;
   height: auto;
-  padding-bottom: 45%;
+  padding-bottom: 18%;
   position: relative;
+  transition: 0.3s all;
+  opacity: 0;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) a {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink {
   -webkit-clip-path: polygon(30% 0%, 72% 1%, 88.5% 19%, 93% 58%, 89% 59%, 59% 91%, 45% 91%, 42% 100%, 28% 90%, 7% 89%, 10% 18%);
           clip-path: polygon(30% 0%, 72% 1%, 88.5% 19%, 93% 58%, 89% 59%, 59% 91%, 45% 91%, 42% 100%, 28% 90%, 7% 89%, 10% 18%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) a .m1 {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink.active .m1 {
+  animation: mainImgHover_1-1 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink:hover .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink:active .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink.active .m2 {
+  animation: mainImgHover_1-2 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink .m1 {
   width: 130%;
   padding-bottom: 135%;
   background: url("../imgaes/mainImg/mainImg_1-1.png") no-repeat;
@@ -698,7 +734,7 @@ html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) a .m1 {
   left: 0px;
   top: 25%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) a .m2 {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) .imgLink .m2 {
   width: 104%;
   padding-bottom: 118%;
   background: url("../imgaes/mainImg/mainImg_1-2.png") no-repeat;
@@ -709,80 +745,222 @@ html body main .mainBox article .mainPage .imgBox li:nth-of-type(1) a .m2 {
 html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .img {
   background-position-x: 12.5%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) a {
-  -webkit-clip-path: polygon(31% 1.5%, 53% 1.5%, 87% 9%, 87% 69%, 81% 72%, 85% 93%, 67% 92%, 64% 100%, 53% 92%, 20% 90%, 23% 61%, 15% 57%, 15% 4%);
-          clip-path: polygon(31% 1.5%, 53% 1.5%, 87% 9%, 87% 69%, 81% 72%, 85% 93%, 67% 92%, 64% 100%, 53% 92%, 20% 90%, 23% 61%, 15% 57%, 15% 4%);
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink {
+  -webkit-clip-path: polygon(31% 1.5%, 53% 1.5%, 85% 9%, 85% 69%, 78% 74%, 84% 93%, 67% 92%, 64% 100%, 53% 92%, 20% 90%, 24% 61%, 16% 57%, 15% 4%);
+          clip-path: polygon(31% 1.5%, 53% 1.5%, 85% 9%, 85% 69%, 78% 74%, 84% 93%, 67% 92%, 64% 100%, 53% 92%, 20% 90%, 24% 61%, 16% 57%, 15% 4%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) a .logo {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink.active .m1 {
+  animation: mainImgHover_2-1 3s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink:hover .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink:active .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink.active .m2 {
+  animation: mainImgHover_2-2 3s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink .logo {
   background-position-x: 12.5%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) a .m1 {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink .m1 {
   width: 123%;
-  padding-bottom: 101%;
+  padding-bottom: 140%;
   background: url("../imgaes/mainImg/mainImg_2-1.png") no-repeat;
   background-size: 100%;
   top: 20%;
   left: 6%;
 }
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(2) .imgLink .m2 {
+  width: 220%;
+  padding-bottom: 156%;
+  background: url("../imgaes/mainImg/mainImg_2-2.png") no-repeat;
+  background-size: 100%;
+  top: 44%;
+  left: -4%;
+}
 html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .img {
   background-position-x: 25%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) a {
-  -webkit-clip-path: polygon(38% 1.5%, 73% 2.5%, 92% 10%, 96% 62%, 82% 70%, 82% 88%, 57% 90%, 54% 100%, 39% 91%, 7% 93%, 3% 8%);
-          clip-path: polygon(38% 1.5%, 73% 2.5%, 92% 10%, 96% 62%, 82% 70%, 82% 88%, 57% 90%, 54% 100%, 39% 91%, 7% 93%, 3% 8%);
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .imgLink {
+  -webkit-clip-path: polygon(38% 1.5%, 73% 2.5%, 92% 10%, 91% 43.5%, 96% 43.5%, 95% 62%, 82% 70%, 82% 88%, 57% 89%, 54% 100%, 39% 91%, 8% 92%, 5.5% 54.5%, 4.7% 53%, 4% 8%);
+          clip-path: polygon(38% 1.5%, 73% 2.5%, 92% 10%, 91% 43.5%, 96% 43.5%, 95% 62%, 82% 70%, 82% 88%, 57% 89%, 54% 100%, 39% 91%, 8% 92%, 5.5% 54.5%, 4.7% 53%, 4% 8%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) a .logo {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .imgLink.active .m1 {
+  animation: mainImgHover_3 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .imgLink .logo {
   background-position-x: 25%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(3) .imgLink .m1 {
+  width: 110%;
+  padding-bottom: 156%;
+  background: url("../imgaes/mainImg/mainImg_3.png") no-repeat;
+  background-size: 100%;
+  top: 29%;
+  left: -5%;
 }
 html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .img {
   background-position-x: 37.5%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) a {
-  -webkit-clip-path: polygon(33% 4%, 60% 4%, 88% 8%, 87% 35%, 96% 38%, 97% 97%, 71% 94%, 58% 100%, 55% 93%, 18% 89%, 17% 69%, 4% 65%, 3% 10%);
-          clip-path: polygon(33% 4%, 60% 4%, 88% 8%, 87% 35%, 96% 38%, 97% 97%, 71% 94%, 58% 100%, 55% 93%, 18% 89%, 17% 69%, 4% 65%, 3% 10%);
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .imgLink {
+  -webkit-clip-path: polygon(33% 4%, 60% 4%, 88% 8%, 87% 35%, 94% 38%, 97% 97%, 70% 94%, 58% 100%, 55% 92%, 20% 89%, 18% 68.5%, 5% 64.5%, 4% 10%);
+          clip-path: polygon(33% 4%, 60% 4%, 88% 8%, 87% 35%, 94% 38%, 97% 97%, 70% 94%, 58% 100%, 55% 92%, 20% 89%, 18% 68.5%, 5% 64.5%, 4% 10%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) a .logo {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .imgLink.active .m1 {
+  animation: mainImgHover_4 3s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .imgLink .logo {
   background-position-x: 37.5%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(4) .imgLink .m1 {
+  width: 187%;
+  padding-bottom: 300%;
+  background: url("../imgaes/mainImg/mainImg_4.png") no-repeat;
+  background-size: 100%;
+  top: 18%;
+  left: -53%;
 }
 html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .img {
   background-position-x: 50%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) a {
-  -webkit-clip-path: polygon(29% 4%, 76% 2%, 96% 7%, 97% 91%, 66% 90%, 60% 100%, 45% 89%, 22% 88%, 23% 70%, 15% 66%, 15% 36%, 1% 30%, 2% 10%);
-          clip-path: polygon(29% 4%, 76% 2%, 96% 7%, 97% 91%, 66% 90%, 60% 100%, 45% 89%, 22% 88%, 23% 70%, 15% 66%, 15% 36%, 1% 30%, 2% 10%);
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .imgLink {
+  -webkit-clip-path: polygon(29% 4%, 76% 2%, 94% 7%, 94% 66%, 97% 90.5%, 66% 89.5%, 59.5% 101%, 45% 89%, 22% 88%, 24% 69.5%, 16% 66%, 16% 36%, 1% 30%, 2% 10%);
+          clip-path: polygon(29% 4%, 76% 2%, 94% 7%, 94% 66%, 97% 90.5%, 66% 89.5%, 59.5% 101%, 45% 89%, 22% 88%, 24% 69.5%, 16% 66%, 16% 36%, 1% 30%, 2% 10%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) a .logo {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .imgLink.active .m1 {
+  animation: mainImgHover_5 3s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .imgLink .logo {
   background-position-x: 50%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(5) .imgLink .m1 {
+  width: 147%;
+  padding-bottom: 300%;
+  background: url("../imgaes/mainImg/mainImg_5.png") no-repeat;
+  background-size: 100%;
+  top: 18%;
+  left: -6%;
 }
 html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .img {
   background-position-x: 62.5%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) a {
-  -webkit-clip-path: polygon(43% 3%, 68% 2%, 94% 7%, 94% 71%, 91% 88%, 67% 89%, 57% 100%, 50% 89%, 27% 91%, 6% 81%, 5% 18%);
-          clip-path: polygon(43% 3%, 68% 2%, 94% 7%, 94% 71%, 91% 88%, 67% 89%, 57% 100%, 50% 89%, 27% 91%, 6% 81%, 5% 18%);
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink {
+  -webkit-clip-path: polygon(43% 3%, 68% 2%, 93% 7%, 93% 71%, 91% 88%, 67% 88%, 57% 100%, 50% 89%, 27% 91%, 9% 81%, 6% 18%);
+          clip-path: polygon(43% 3%, 68% 2%, 93% 7%, 93% 71%, 91% 88%, 67% 88%, 57% 100%, 50% 89%, 27% 91%, 9% 81%, 6% 18%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) a .logo {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink.active .m1 {
+  animation: mainImgHover_6-1 3s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink:hover .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink:active .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink.active .m2 {
+  animation: mainImgHover_6-2 3s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink .logo {
   background-position-x: 62.5%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink .m1 {
+  width: 160%;
+  padding-bottom: 200%;
+  background: url("../imgaes/mainImg/mainImg_6-1.png") no-repeat;
+  background-size: 100%;
+  top: 37%;
+  left: -30%;
+  z-index: 2;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(6) .imgLink .m2 {
+  width: 100%;
+  padding-bottom: 117%;
+  background: url("../imgaes/mainImg/mainImg_6-2.png") no-repeat;
+  background-size: 100%;
+  top: 17%;
+  left: -2%;
 }
 html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .img {
   background-position-x: 75%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) a {
-  -webkit-clip-path: polygon(37% 4%, 60% 4%, 93% 10%, 90% 90%, 58% 91%, 62% 100%, 41% 91%, 24% 92%, 9% 81%, 9% 8%);
-          clip-path: polygon(37% 4%, 60% 4%, 93% 10%, 90% 90%, 58% 91%, 62% 100%, 41% 91%, 24% 92%, 9% 81%, 9% 8%);
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink {
+  -webkit-clip-path: polygon(37% 4%, 60% 4%, 92% 10%, 90% 90%, 57% 91%, 62% 100%, 41% 91%, 24% 92%, 10% 81%, 9% 8.5%);
+          clip-path: polygon(37% 4%, 60% 4%, 92% 10%, 90% 90%, 57% 91%, 62% 100%, 41% 91%, 24% 92%, 10% 81%, 9% 8.5%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) a .logo {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink.active .m1 {
+  animation: mainImgHover_7-1 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink:hover .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink:active .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink.active .m2 {
+  animation: mainImgHover_7-2 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink .logo {
   background-position-x: 75%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink .m1 {
+  width: 360%;
+  padding-bottom: 300%;
+  background: url("../imgaes/mainImg/mainImg_7-1.png") no-repeat;
+  background-size: 100%;
+  top: 35%;
+  left: -173%;
+  z-index: 2;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(7) .imgLink .m2 {
+  width: 380%;
+  padding-bottom: 277%;
+  background: url("../imgaes/mainImg/mainImg_7-2.png") no-repeat;
+  background-size: 100%;
+  top: -17%;
+  left: -62%;
 }
 html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .img {
   background-position-x: 87.5%;
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) a {
-  -webkit-clip-path: polygon(21% 3%, 58% 3%, 98% 11%, 97% 96%, 41% 94%, 28% 100%, 34% 94%, 13% 93%, 12% 47%, 1% 41%, 2% 8%);
-          clip-path: polygon(21% 3%, 58% 3%, 98% 11%, 97% 96%, 41% 94%, 28% 100%, 34% 94%, 13% 93%, 12% 47%, 1% 41%, 2% 8%);
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink {
+  -webkit-clip-path: polygon(21% 3%, 58% 3%, 98% 11%, 97% 96%, 41% 94%, 28% 100%, 34% 94%, 15% 93%, 13% 47%, 2% 41%, 2% 8%);
+          clip-path: polygon(21% 3%, 58% 3%, 98% 11%, 97% 96%, 41% 94%, 28% 100%, 34% 94%, 15% 93%, 13% 47%, 2% 41%, 2% 8%);
 }
-html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) a .logo {
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:hover .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:active .m1, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink.active .m1 {
+  animation: mainImgHover_8-1 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:hover .m1::before, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:active .m1::before, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink.active .m1::before {
+  animation: mainImgHover_8-3 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:hover .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:active .m2, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink.active .m2 {
+  animation: mainImgHover_8-2 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:hover .m2::before, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink:active .m2::before, html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink.active .m2::before {
+  animation: mainImgHover_8-3 5s linear 0s infinite;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink .logo {
   background-position-x: 87.5%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink .m1 {
+  width: 210%;
+  padding-bottom: 164%;
+  background: url("../imgaes/mainImg/mainImg_8-1.png") no-repeat;
+  background-size: 100%;
+  top: 38%;
+  left: -25%;
+  z-index: 2;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink .m1::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../imgaes/mainImg/mainImg_8-1.png") no-repeat;
+  opacity: 0;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink .m2 {
+  width: 280%;
+  padding-bottom: 169%;
+  background: url("../imgaes/mainImg/mainImg_8-2.png") no-repeat;
+  background-size: 100%;
+  top: 13%;
+  left: -75%;
+}
+html body main .mainBox article .mainPage .imgBox li:nth-of-type(8) .imgLink .m2::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background: url("../imgaes/mainImg/mainImg_8-2.png") no-repeat;
+  opacity: 0;
 }
 html body main .mainBox article .mainPage .imgBox li .img {
   width: 100%;
@@ -793,7 +971,7 @@ html body main .mainBox article .mainPage .imgBox li .img {
   top: 0px;
   left: 0px;
 }
-html body main .mainBox article .mainPage .imgBox li a {
+html body main .mainBox article .mainPage .imgBox li .imgLink {
   display: block;
   width: 100%;
   height: 90%;
@@ -802,7 +980,7 @@ html body main .mainBox article .mainPage .imgBox li a {
   left: 0px;
   overflow: hidden;
 }
-html body main .mainBox article .mainPage .imgBox li a .logo {
+html body main .mainBox article .mainPage .imgBox li .imgLink .logo {
   width: 83.3%;
   height: 0px;
   padding-bottom: 37%;
@@ -812,10 +990,30 @@ html body main .mainBox article .mainPage .imgBox li a .logo {
   top: 7%;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 3;
 }
-html body main .mainBox article .mainPage .imgBox li a .innerImg {
+html body main .mainBox article .mainPage .imgBox li .imgLink .innerImg {
   position: absolute;
   height: 0px;
+}
+html body main .mainBox article .mainPage .imgBox li .wordLink {
+  display: block;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0%;
+  width: auto;
+  height: auto;
+  padding: 10px 5px;
+  background: #ffffff;
+  border: solid 3px #000000;
+  color: #7b0000;
+  border-radius: 3px;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: bold;
+  font-size: 18px;
+  box-shadow: 2px 2px 0px 0px #ff00ff;
 }
 html body main .mainBox .mainBg {
   display: none;
@@ -834,8 +1032,8 @@ html body main .mainBox .mainBg.display {
 html body main .mainBox .mainBg .img {
   width: 1920px;
   height: 100%;
-  -webkit-clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
-          clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
+  -webkit-clip-path: polygon(57% 0, 100% 60%, 100% 90%, 0 85%, 0 0);
+          clip-path: polygon(57% 0, 100% 60%, 100% 90%, 0 85%, 0 0);
   background: #ffa200;
   overflow: hidden;
   animation: mainBgClip 1.2s ease-out 0s;
@@ -849,8 +1047,15 @@ html body main .mainBox .mainBg .img div {
 }
 html body footer {
   width: 100%;
-  height: 50px;
-  background: #000;
+  height: auto;
+  margin-top: 50px;
+}
+html body footer .top {
+  width: 100%;
+  height: 53px;
+  border: solid 1px #000000;
+  border-width: 1px 0px;
+  background: linear-gradient(to bottom, #f19900 0%, #c37c00 100%);
 }
 html body .bg {
   position: absolute;
@@ -1173,8 +1378,8 @@ html body .bg {
             clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);
   }
   100% {
-    -webkit-clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
-            clip-path: polygon(57% 0, 100% 60%, 100% 82%, 0 77%, 0 0);
+    -webkit-clip-path: polygon(57% 0, 100% 60%, 100% 90%, 0 85%, 0 0);
+            clip-path: polygon(57% 0, 100% 60%, 100% 90%, 0 85%, 0 0);
   }
 }
 @keyframes openBtn_1 {
@@ -1191,5 +1396,351 @@ html body .bg {
   }
   100% {
     transform: translate(-50%, -50%);
+  }
+}
+@keyframes mainImgHover_1-1 {
+  0% {
+    transform: translate(100%, 100%) scale(1);
+  }
+  10% {
+    transform: translate(0%, 0%) scale(1.2);
+  }
+  20% {
+    transform: translate(-50%, -30%) scale(0.7) rotate(45deg);
+  }
+  30% {
+    transform: translate(30%, 10%) scale(1.5) rotate(-20deg);
+  }
+  50% {
+    transform: translate(0%, 0%) scale(1);
+  }
+  100% {
+    transform: translate(0%, 0%) scale(1);
+  }
+}
+@keyframes mainImgHover_1-2 {
+  0% {
+    transform: translate(-100%, 100%) rotate(-75deg) scale(1);
+  }
+  10% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1.2);
+  }
+  15% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  25% {
+    transform: rotate(-15deg) scale(1.2);
+  }
+  35% {
+    transform: rotate(15deg) scale(1.2);
+  }
+  40% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+@keyframes mainImgHover_2-1 {
+  0% {
+    transform: translate(-50%, -50%) rotate(-60deg) scale(0);
+  }
+  20% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1);
+  }
+  30% {
+    transform: rotate(-15deg) scale(1.2);
+  }
+  40% {
+    transform: rotate(15deg) scale(1.2);
+  }
+  50% {
+    transform: rotate(-15deg) scale(1.2);
+  }
+  60% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+@keyframes mainImgHover_2-2 {
+  0% {
+    transform: rotate(90deg) scale(0);
+  }
+  10% {
+    transform: rotate(0deg) scale(1.2);
+  }
+  15% {
+    transform: scale(1);
+  }
+}
+@keyframes mainImgHover_3 {
+  0% {
+    transform: translate(20%, 100%) rotate(-60deg) scale(0);
+  }
+  10% {
+    transform: translate(0%, 0%) rotate(0deg) scale(1.2);
+  }
+  15% {
+    transform: translateY(5%) scale(1.2);
+  }
+  20% {
+    transform: translateY(-5%) scale(1.2);
+  }
+  25% {
+    transform: translateY(5%) scale(1.2);
+  }
+  30% {
+    transform: translateY(-5%) scale(1.2);
+  }
+  35% {
+    transform: translateY(0%) scale(1);
+  }
+}
+@keyframes mainImgHover_4 {
+  0% {
+    opacity: 0;
+    transform: translate(-30%, 0%);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes mainImgHover_5 {
+  0% {
+    opacity: 0;
+    transform: translate(-30%, 0%);
+  }
+  20% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes mainImgHover_6-1 {
+  0% {
+    opacity: 0;
+    transform: translate(50%, -50%);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes mainImgHover_6-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes mainImgHover_7-1 {
+  0% {
+    opacity: 0;
+    transform: translate(-30%, 30%) scale(1);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(30%, -30%) scale(1.2);
+  }
+  20% {
+    transform: translate(-10%, -20%) scale(1);
+  }
+  30% {
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes mainImgHover_7-2 {
+  0% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+}
+@keyframes mainImgHover_8-1 {
+  0% {
+    opacity: 0;
+    transform: translate(60%, -30%);
+  }
+  10% {
+    opacity: 1;
+    transform: translate(0%, 0%);
+  }
+}
+@keyframes mainImgHover_8-2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  10% {
+    opacity: 0;
+    transform: translateX(-60%);
+  }
+  20% {
+    opacity: 1;
+    transform: translateX(0%);
+  }
+}
+@keyframes mainImgHover_8-3 {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  20% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  30% {
+    opacity: 0.5;
+    transform: scale(1.2);
+  }
+  40% {
+    opacity: 0;
+    transform: scale(1.5);
+  }
+}
+@keyframes mainImgShow_1 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  20% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  25% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainImgShow_2 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  25% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainImgShow_3 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  30% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  35% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainImgShow_4 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  35% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  40% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainImgShow_5 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  40% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  45% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainImgShow_6 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  45% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainImgShow_7 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  55% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes mainImgShow_8 {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  55% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(0%);
+  }
+  100% {
+    opacity: 1;
   }
 }

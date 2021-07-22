@@ -496,8 +496,10 @@ html body main .rightIcon a:hover::before, html body main .rightIcon a:active::b
   animation: rightHover_2 0.3s linear 0s;
 }
 html body main .rightIcon a:hover::after, html body main .rightIcon a:active::after, html body main .rightIcon a.active::after {
+  left: 48%;
   background-position-y: 100%;
   animation: rightHover_1 0.3s linear 0s;
+  transform: translate(-50%, -50%) scale(1);
 }
 html body main .rightIcon a::before {
   content: "";
@@ -514,12 +516,13 @@ html body main .rightIcon a::before {
 html body main .rightIcon a::after {
   content: "";
   position: absolute;
-  top: 0px;
-  left: 0px;
+  top: 50%;
+  left: 51%;
   width: 100%;
   height: 100%;
-  background: url("../imgaes/rightIconBox.png") no-repeat;
+  background: url(../imgaes/rightIconBox.png) no-repeat;
   background-size: 100%;
+  transform: translate(-50%, -50%) scale(0.9);
 }
 html body main .rightIcon a:nth-of-type(1) {
   top: 0px;
@@ -549,7 +552,7 @@ html body main .download {
 }
 html body main .download:hover, html body main .download:active, html body main .download.active {
   background-position-y: 100%;
-  animation: rightHover_1 0.3s linear 0s;
+  animation: leftDownload 0.3s linear 0s;
 }
 html body main .download span {
   display: block;
@@ -1350,13 +1353,16 @@ html body .bg {
 }
 @keyframes rightHover_1 {
   0% {
-    transform: scale(0.9);
+    left: 48%;
+    transform: translate(-50%, -50%) scale(0.9);
   }
   30% {
-    transform: scale(1.1);
+    left: 48%;
+    transform: translate(-50%, -50%) scale(1.1);
   }
   40% {
-    transform: scale(1);
+    left: 48%;
+    transform: translate(-50%, -50%) scale(1);
   }
 }
 @keyframes rightHover_2 {
@@ -1368,6 +1374,17 @@ html body .bg {
   }
   40% {
     transform: translateY(-50%) scale(1);
+  }
+}
+@keyframes leftDownload {
+  0% {
+    transform: scale(0.9);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
   }
 }
 @keyframes marqueeJump {

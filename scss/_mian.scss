@@ -11,15 +11,16 @@ html {
 
         &::-webkit-scrollbar {
             width: 5px;
-            height: 5px;
+            height: 15px;
         }
 
         &::-webkit-scrollbar-thumb {
-            background: #383838;
+            background: #000000;
+            border-radius: 30px;
         }
 
         &::-webkit-scrollbar-track {
-            background: #888888;
+            background: #ffdd00;
         }
 
         //header
@@ -294,11 +295,11 @@ html {
 
             //logo
             .logo {
-                width: 220px;
-                height: 105px;
+                width: 205px;
+                height: 100px;
                 background: url('../imgaes/logo.png') no-repeat;
                 background-size: 100%;
-                margin-top: 7px;
+                margin-top: 10px;
                 float: right;
                 cursor: pointer;
             }
@@ -1124,6 +1125,16 @@ html {
                                     .innerImg {
                                         position: absolute;
                                         height: 0px;
+                                    }
+
+                                    .mask {
+                                        width: 100%;
+                                        height: 60%;
+                                        position: absolute;
+                                        left: 0%;
+                                        bottom: 0%;
+                                        background: #0000009c;
+                                        clip-path: polygon(0 33%, 100% 0%, 100% 98%, 0% 100%);
                                     }
                                 }
 

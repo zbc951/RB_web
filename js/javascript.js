@@ -160,19 +160,19 @@ $(function(){
         $body.animate({
                 scrollTop:500
         },500)
-    },3800)
+    },2800)
 
     setTimeout(function(){
         $('.mainBg').addClass('display');
-    },4000)
+    },3000)
 
     setTimeout(function(){
         $('.imgBox').addClass('slide');
-    },4200)
+    },3200)
 
     setTimeout(function(){
         $('.imgBox li').css('opacity','1');
-    },8500)
+    },6200)
 })
 
 // footer

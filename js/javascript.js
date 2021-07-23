@@ -116,14 +116,6 @@ $(function(){
         }
     })
 })
-// $(function(){
-//     $('.openBtn').click(function(){
-//         $('.imgBox').addClass('slide');
-//         setTimeout(function(){
-//             $('.imgBox li').css('opacity','1');
-//         },3000)
-//     })
-// })
 
 // mainBg
 $(function(){
@@ -137,21 +129,6 @@ $(function(){
         $(size1).css('width', (String(wWD) + "px"));
     })
 })
-// $(function(){
-//     setTimeout(function(){
-//         $('.openBtn').delay('5000').fadeIn('300');
-//     })
-
-//     $('.openBtn').click(function(){
-//         $(this).fadeOut('300');
-//         $('.mainBg').addClass('display');
-
-//         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'); //各瀏覽器相容性
-//         $body.animate({
-//                 scrollTop:500
-//         },300)
-//     })
-// })
 
 //main區域入場動畫
 $(function(){
@@ -229,11 +206,18 @@ $(function(){
     })
 })
 
-//ppp
+//頂部X軸滑動問題
 setTimeout(function() {
     $(window).scroll(function(){
-        var bbb = $(window).scrollTop();
+        var topScroll = $(window).scrollTop();
         $('header').css('position','absolute');
-        $('header').css('top', (String(bbb) + "px"));
+        $('header').css('top', (String(topScroll) + "px"));
     })
 },6000)
+
+//主圖hover連動
+$(function(){
+    $('.wordLink').hover(function(){
+        $(this).prev('a').toggleClass('active');
+    })
+})

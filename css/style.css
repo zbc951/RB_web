@@ -685,9 +685,6 @@ html body main .mainBox article .mainPage .imgBox {
   overflow: hidden;
   padding-bottom: 50px;
 }
-html body main .mainBox article .mainPage .imgBox.slide li {
-  padding-bottom: 45%;
-}
 html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(1) {
   animation: mainImgShow_1 5s ease-out 0s;
 }
@@ -715,7 +712,7 @@ html body main .mainBox article .mainPage .imgBox.slide li:nth-of-type(8) {
 html body main .mainBox article .mainPage .imgBox li {
   width: 100%;
   height: auto;
-  padding-bottom: 18%;
+  padding-bottom: 45%;
   position: relative;
   transition: 0.3s all;
   opacity: 0;
@@ -1005,7 +1002,7 @@ html body main .mainBox article .mainPage .imgBox li .wordLink {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  bottom: 0%;
+  top: 92%;
   width: auto;
   height: auto;
   padding: 10px 5px;
@@ -1140,6 +1137,26 @@ html body .goTop {
   right: 0px;
   bottom: 150px;
 }
+html body .goTop::before {
+  content: "";
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+  border-width: 0px 12px 15px 12px;
+  left: 50%;
+  top: 30%;
+}
+html body .goTop::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 3px;
+  background: #ffffff;
+  left: 50%;
+  top: 53%;
+}
 html body .bg {
   position: absolute;
   width: 100%;
@@ -1174,19 +1191,19 @@ html body .bg {
 @keyframes bannerWordJump_1 {
   0% {
     opacity: 0;
-    transform: rotate(480deg) scale(2);
+    transform: scale(3);
   }
   7% {
     opacity: 0;
-    transform: rotate(480deg) scale(2);
+    transform: scale(3);
   }
-  15% {
+  12% {
     opacity: 1;
-    transform: rotate(0deg) scale(1);
+    transform: scale(1);
   }
   100% {
     opacity: 1;
-    transform: rotate(0deg) scale(1);
+    transform: scale(1);
   }
 }
 @keyframes bannerWordJump_1-2 {
@@ -1392,43 +1409,46 @@ html body .bg {
     opacity: 0;
     transform: rotate(-30deg);
   }
-  60% {
+  30% {
     opacity: 0;
     transform: rotate(-30deg);
   }
-  63% {
+  33% {
     opacity: 1;
     transform: rotate(-30deg) scale(1.2);
   }
-  65% {
+  35% {
     transform: rotate(-30deg) scale(1);
   }
-  70% {
+  40% {
     transform: rotate(0deg);
   }
-  80% {
+  50% {
     transform: scale(1);
   }
-  83% {
+  53% {
     transform: scale(1.1);
   }
-  85% {
+  55% {
     transform: scale(1);
   }
-  88% {
+  58% {
     transform: scale(1.1);
   }
-  90% {
+  60% {
     transform: scale(1);
   }
-  93% {
+  63% {
     transform: scale(1.1);
   }
-  95% {
+  65% {
     transform: scale(1);
   }
-  98% {
+  68% {
     transform: scale(1.1);
+  }
+  70% {
+    transform: scale(1);
   }
   100% {
     transform: scale(1);
@@ -1439,18 +1459,18 @@ html body .bg {
     opacity: 0;
     width: 0%;
   }
-  70% {
+  40% {
     opacity: 0;
     width: 0%;
   }
-  75% {
+  45% {
     opacity: 1;
     width: 0%;
   }
-  80% {
+  50% {
     width: 0%;
   }
-  100% {
+  70% {
     width: 96%;
   }
 }
@@ -1467,8 +1487,8 @@ html body .bg {
 }
 @keyframes mainBgClip {
   0% {
-    -webkit-clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);
-            clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);
+    -webkit-clip-path: polygon(0% 0, 100% 60%, 100% 62%, 0 2%, 0 0);
+            clip-path: polygon(0% 0, 100% 60%, 100% 62%, 0 2%, 0 0);
   }
   50% {
     -webkit-clip-path: polygon(0% 0, 100% 60%, 100% 61%, 0 1%, 0 0);

@@ -22,8 +22,6 @@ html {
             background: #888888;
         }
 
-
-
         //header
         header {
             width: 100%;
@@ -694,6 +692,7 @@ html {
                         margin-top: 50px;
                         position: relative;
 
+                        //點擊展開
                         .openBtn {
                             display: none;
                             width: 277px;
@@ -762,7 +761,7 @@ html {
                             &.slide {
 
                                 li {
-                                    padding-bottom: 45%;
+                                    // padding-bottom: 45%;
 
                                     &:nth-of-type(1) {
                                         animation: mainImgShow_1 5s ease-out 0s;
@@ -801,7 +800,8 @@ html {
                             li {
                                 width: 100%;
                                 height: auto;
-                                padding-bottom: 18%;
+                                // padding-bottom: 18%;
+                                padding-bottom: 45%;
                                 position: relative;
                                 transition: 0.3s all;
                                 opacity: 0;
@@ -1187,7 +1187,7 @@ html {
                                     position: absolute;
                                     left: 50%;
                                     transform: translateX(-50%);
-                                    bottom: 0%;
+                                    top: 92%;
                                     width: auto;
                                     height: auto;
                                     padding: 10px 5px;
@@ -1355,6 +1355,28 @@ html {
             position: fixed;
             right: 0px;
             bottom: 150px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                width: 0px;
+                height: 0px;
+                border-style: solid;
+                border-color: transparent transparent #ffffff transparent;
+                border-width: 0px 12px 15px 12px;
+                left: 50%;
+                top: 30%;
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                width: 24px;
+                height: 3px;
+                background: #ffffff;
+                left: 50%;
+                top: 53%;
+            }
         }
 
         //背景

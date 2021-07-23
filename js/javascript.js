@@ -116,14 +116,14 @@ $(function(){
         }
     })
 })
-$(function(){
-    $('.openBtn').click(function(){
-        $('.imgBox').addClass('slide');
-        setTimeout(function(){
-            $('.imgBox li').css('opacity','1');
-        },3000)
-    })
-})
+// $(function(){
+//     $('.openBtn').click(function(){
+//         $('.imgBox').addClass('slide');
+//         setTimeout(function(){
+//             $('.imgBox li').css('opacity','1');
+//         },3000)
+//     })
+// })
 
 // mainBg
 $(function(){
@@ -137,20 +137,42 @@ $(function(){
         $(size1).css('width', (String(wWD) + "px"));
     })
 })
+// $(function(){
+//     setTimeout(function(){
+//         $('.openBtn').delay('5000').fadeIn('300');
+//     })
+
+//     $('.openBtn').click(function(){
+//         $(this).fadeOut('300');
+//         $('.mainBg').addClass('display');
+
+//         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'); //各瀏覽器相容性
+//         $body.animate({
+//                 scrollTop:500
+//         },300)
+//     })
+// })
+
+//main區域入場動畫
 $(function(){
     setTimeout(function(){
-        $('.openBtn').delay('5000').fadeIn('300');
-    })
-
-    $('.openBtn').click(function(){
-        $(this).fadeOut('300');
-        $('.mainBg').addClass('display');
-
         var $body = (window.opera) ? (document.compatMode == "CSS1Compat" ? $('html') : $('body')) : $('html,body'); //各瀏覽器相容性
         $body.animate({
                 scrollTop:500
-        },300)
-    })
+        },500)
+    },3800)
+
+    setTimeout(function(){
+        $('.mainBg').addClass('display');
+    },4000)
+
+    setTimeout(function(){
+        $('.imgBox').addClass('slide');
+    },4200)
+
+    setTimeout(function(){
+        $('.imgBox li').css('opacity','1');
+    },8500)
 })
 
 // footer

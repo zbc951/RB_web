@@ -181,7 +181,7 @@ $(function(){
         $('header').animate({
             top: "+=120",
             opacity: 1
-        })
+        },300)
         $('header').css('top','0px');
     },5600)
 })
@@ -228,3 +228,12 @@ $(function(){
         },300)
     })
 })
+
+//ppp
+setTimeout(function() {
+    $(window).scroll(function(){
+        var bbb = $(window).scrollTop();
+        $('header').css('position','absolute');
+        $('header').css('top', (String(bbb) + "px"));
+    })
+},6000)

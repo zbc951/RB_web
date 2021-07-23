@@ -160,19 +160,30 @@ $(function(){
         $body.animate({
                 scrollTop:500
         },500)
-    },2800)
+    },2000)
 
     setTimeout(function(){
         $('.mainBg').addClass('display');
-    },3000)
+    },2200)
 
     setTimeout(function(){
         $('.imgBox').addClass('slide');
-    },3200)
+    },2400)
 
     setTimeout(function(){
         $('.imgBox li').css('opacity','1');
-    },6200)
+        $('header').css('position','fixed');
+        $('header').css('top','-120px');
+        $('header').css('opacity','0');
+    },5400)
+
+    setTimeout(function(){
+        $('header').animate({
+            top: "+=120",
+            opacity: 1
+        })
+        $('header').css('top','0px');
+    },5600)
 })
 
 // footer
